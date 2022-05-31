@@ -5,7 +5,7 @@ import io.github.tuguzd.restaurantapp.domain.model.util.Identifiable
 /**
  * Base interface for all repositories which contains data of type [T].
  */
-public interface Repository<I : Any, T : Identifiable<I>> {
+public interface DomainRepository<I : Any, T : Identifiable<I>> {
     public suspend fun readAll(): List<T>
     public suspend fun readById(id: I): T?
 
