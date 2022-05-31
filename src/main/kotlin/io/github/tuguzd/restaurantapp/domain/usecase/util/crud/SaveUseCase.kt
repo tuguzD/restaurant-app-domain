@@ -8,6 +8,6 @@ import io.github.tuguzd.restaurantapp.domain.repository.util.Repository
  */
 public open class SaveUseCase <I : Any, T : Identifiable<I>>(
     private val repository: Repository<I, T>
-) : suspend (T) -> Unit {
-    public override suspend operator fun invoke(item: T): Unit = repository.save(item)
+) : suspend (T) -> T {
+    public override suspend operator fun invoke(item: T): T = repository.save(item)
 }

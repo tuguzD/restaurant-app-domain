@@ -2,7 +2,7 @@ package io.github.tuguzd.restaurantapp.domain.usecase.role_access_control.user.c
 
 import io.github.tuguzd.restaurantapp.domain.model.role_access_control.user.User
 import io.github.tuguzd.restaurantapp.domain.repository.role_access_control.UserRepository
-import io.github.tuguzd.restaurantapp.domain.usecase.util.crud.FindAllUseCase
+import io.github.tuguzd.restaurantapp.domain.usecase.util.crud.ReadAllUseCase
 
-public class FindAllUserUseCase(userRepository: UserRepository) :
-    FindAllUseCase<String, User>(userRepository)
+public class ReadAllUserUseCase(userRepository: UserRepository) :
+    ReadAllUseCase<String, User>(userRepository)
