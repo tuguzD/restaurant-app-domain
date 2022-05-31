@@ -8,6 +8,6 @@ import io.github.tuguzd.restaurantapp.domain.repository.util.Repository
  */
 public open class DeleteUseCase<I : Any, T : Identifiable<I>>(
     private val repository: Repository<I, T>
-) : suspend (T) -> Unit {
-    public override suspend operator fun invoke(item: T): Unit = repository.delete(item)
+) : suspend (I) -> Unit {
+    public override suspend operator fun invoke(id: I): Unit = repository.delete(id)
 }

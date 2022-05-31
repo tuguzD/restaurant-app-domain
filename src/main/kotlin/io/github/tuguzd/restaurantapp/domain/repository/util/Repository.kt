@@ -11,8 +11,6 @@ public interface Repository<I : Any, T : Identifiable<I>> {
 
     public suspend fun save(item: T): T
 
-    public suspend fun delete(item: T)
-//    public suspend fun deleteById(id: I)
-
+    public suspend fun delete(id: I)
     public suspend fun clear()
 }
