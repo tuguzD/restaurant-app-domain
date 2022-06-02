@@ -1,6 +1,7 @@
 package io.github.tuguzd.restaurantapp.domain.model.organization.service
 
 import com.aventrix.jnanoid.jnanoid.NanoIdUtils.randomNanoId
+import io.github.tuguzd.restaurantapp.domain.model.organization.service_item.ServiceItem
 import kotlinx.serialization.EncodeDefault
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.Serializable
@@ -20,4 +21,6 @@ public data class ServiceData(
 
     @EncodeDefault override val datetimeCreate: String? = null,
     @EncodeDefault override val datetimeModify: String? = null,
+
+    @EncodeDefault override val serviceItems: Set<ServiceItem> = setOf(),
 ) : Service

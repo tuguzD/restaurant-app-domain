@@ -1,6 +1,7 @@
 package io.github.tuguzd.restaurantapp.domain.model.role_access_control.user
 
 import com.aventrix.jnanoid.jnanoid.NanoIdUtils.randomNanoId
+import io.github.tuguzd.restaurantapp.domain.model.client_work.order.Order
 import kotlinx.serialization.EncodeDefault
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.Serializable
@@ -22,4 +23,6 @@ public data class UserData(
 
     @EncodeDefault override val datetimeCreate: String? = null,
     @EncodeDefault override val datetimeModify: String? = null,
+
+    @EncodeDefault override val orders: Set<Order> = setOf(),
 ) : User

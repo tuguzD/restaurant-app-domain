@@ -1,5 +1,6 @@
 package io.github.tuguzd.restaurantapp.domain.model.organization.service_item_point
 
+import io.github.tuguzd.restaurantapp.domain.model.client_work.order.Order
 import io.github.tuguzd.restaurantapp.domain.model.organization.service_item.ServiceItem
 import io.github.tuguzd.restaurantapp.domain.model.util.Datable
 import io.github.tuguzd.restaurantapp.domain.model.util.Describable
@@ -17,4 +18,6 @@ public interface ServiceItemPoint : Identifiable<String>, Datable, Presentable, 
 
     public val availability: Boolean
     public val clientMaxCount: Int
+
+    public val orders: Set<Order>
 }
