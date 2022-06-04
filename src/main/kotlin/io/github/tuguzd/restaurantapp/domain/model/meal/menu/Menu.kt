@@ -2,21 +2,14 @@ package io.github.tuguzd.restaurantapp.domain.model.meal.menu
 
 import io.github.tuguzd.restaurantapp.domain.model.meal.menu_item.MenuItem
 import io.github.tuguzd.restaurantapp.domain.model.organization.service_item.ServiceItem
-import io.github.tuguzd.restaurantapp.domain.model.util.Datable
-import io.github.tuguzd.restaurantapp.domain.model.util.Describable
-import io.github.tuguzd.restaurantapp.domain.model.util.Identifiable
-import io.github.tuguzd.restaurantapp.domain.model.util.Presentable
+import io.github.tuguzd.restaurantapp.domain.model.util.*
 
 /**
  * Basic interface for menu data representation.
  */
-public interface Menu : Identifiable<String>, Datable, Presentable, Describable {
-    // TODO: Make not nullable
-    public val serviceItem: ServiceItem?
-
-    // TODO: Make menu global for food-service
-    //  or local for food-service item
+public interface Menu : Identifiable<NanoId>, Datable, Presentable, Describable {
     public val type: MenuType
+    public val serviceItem: ServiceItem
 
     public val name: String
 

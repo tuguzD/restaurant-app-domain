@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 public enum class ServiceItemType {
-    Canteen,
+    Mixed,
+    Serving,
     Delivery,
-    Restaurant,
 }

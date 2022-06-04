@@ -5,6 +5,6 @@ package io.github.tuguzd.restaurantapp.domain.model.util
  * [creation][datetimeCreate] and [modification][datetimeModify] dates.
  */
 public interface Datable {
-    public val datetimeCreate: String? // TODO: Make not nullable, use datetime
+    public val datetimeCreate: String // TODO: Use datetime
     public val datetimeModify: String? // TODO: Use datetime
 }

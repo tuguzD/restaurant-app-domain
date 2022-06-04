@@ -1,8 +1,9 @@
 package io.github.tuguzd.restaurantapp.domain.model.meal.menu_item
 
-import com.aventrix.jnanoid.jnanoid.NanoIdUtils.randomNanoId
 import io.github.tuguzd.restaurantapp.domain.model.client_work.order_item.OrderItem
 import io.github.tuguzd.restaurantapp.domain.model.meal.menu.Menu
+import io.github.tuguzd.restaurantapp.domain.model.util.NanoId
+import io.github.tuguzd.restaurantapp.domain.util.randomNanoId
 import kotlinx.serialization.EncodeDefault
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.Serializable
@@ -13,15 +14,14 @@ import kotlinx.serialization.Serializable
 @OptIn(ExperimentalSerializationApi::class)
 @Serializable
 public data class MenuItemData(
-    @EncodeDefault override val id: String = randomNanoId(),
+    @EncodeDefault override val id: NanoId = randomNanoId(),
     override val type: MenuItemType,
-    @EncodeDefault override val menu: Menu? = null,
-
-    @EncodeDefault override val description: String? = null,
+    override val menu: Menu,
 
     @EncodeDefault override val imageUri: String? = null,
+    @EncodeDefault override val description: String? = null,
 
-    @EncodeDefault override val datetimeCreate: String? = null,
+    override val datetimeCreate: String,
     @EncodeDefault override val datetimeModify: String? = null,
 
     @EncodeDefault override val orderItems: Set<OrderItem> = setOf(),
