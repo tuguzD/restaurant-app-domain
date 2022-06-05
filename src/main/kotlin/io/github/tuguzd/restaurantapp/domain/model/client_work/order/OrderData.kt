@@ -1,7 +1,6 @@
 package io.github.tuguzd.restaurantapp.domain.model.client_work.order
 
 import io.github.tuguzd.restaurantapp.domain.model.access_control.user.User
-import io.github.tuguzd.restaurantapp.domain.model.client_work.order_item.OrderItem
 import io.github.tuguzd.restaurantapp.domain.model.organization.service_item_point.ServiceItemPoint
 import io.github.tuguzd.restaurantapp.domain.model.util.NanoId
 import io.github.tuguzd.restaurantapp.domain.util.randomNanoId
@@ -16,7 +15,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class OrderData(
     @EncodeDefault override val id: NanoId = randomNanoId(),
-    override val user: User,
+    override val creator: User,
     override val serviceItemPoint: ServiceItemPoint,
 
     override val clientCount: Int,
@@ -26,6 +25,4 @@ public data class OrderData(
 
     override val datetimeCreate: String,
     @EncodeDefault override val datetimeModify: String? = null,
-
-    @EncodeDefault override val orderItems: Set<OrderItem> = setOf(),
 ) : Order
