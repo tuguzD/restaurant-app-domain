@@ -2,6 +2,7 @@ package io.github.tuguzd.restaurantapp.domain.model.access_control.user
 
 import io.github.tuguzd.restaurantapp.domain.model.client_work.order.Order
 import io.github.tuguzd.restaurantapp.domain.model.util.*
+import io.github.tuguzd.restaurantapp.domain.model.util.feature.*
 
 /**
  * Basic interface for user data representation.

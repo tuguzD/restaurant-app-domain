@@ -3,10 +3,8 @@ package io.github.tuguzd.restaurantapp.domain.model.client_work.order
 import io.github.tuguzd.restaurantapp.domain.model.access_control.user.User
 import io.github.tuguzd.restaurantapp.domain.model.client_work.order_item.OrderItem
 import io.github.tuguzd.restaurantapp.domain.model.organization.service_item_point.ServiceItemPoint
-import io.github.tuguzd.restaurantapp.domain.model.util.Datable
-import io.github.tuguzd.restaurantapp.domain.model.util.Describable
-import io.github.tuguzd.restaurantapp.domain.model.util.Identifiable
 import io.github.tuguzd.restaurantapp.domain.model.util.NanoId
+import io.github.tuguzd.restaurantapp.domain.model.util.feature.*
 
 /**
  * Basic interface for client order data representation.

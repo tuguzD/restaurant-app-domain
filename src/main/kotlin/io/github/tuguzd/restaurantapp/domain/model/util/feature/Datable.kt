@@ -1,4 +1,4 @@
-package io.github.tuguzd.restaurantapp.domain.model.util
+package io.github.tuguzd.restaurantapp.domain.model.util.feature
 
 /**
  * Represent objects which * has

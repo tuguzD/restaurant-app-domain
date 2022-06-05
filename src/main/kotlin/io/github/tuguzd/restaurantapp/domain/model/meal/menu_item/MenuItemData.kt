@@ -18,6 +18,8 @@ public data class MenuItemData(
     override val type: MenuItemType,
     override val menu: Menu,
 
+    override val name: String,
+
     @EncodeDefault override val imageUri: String? = null,
     @EncodeDefault override val description: String? = null,
 

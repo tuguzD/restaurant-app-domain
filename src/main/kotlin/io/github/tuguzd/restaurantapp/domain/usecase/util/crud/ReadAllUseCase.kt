@@ -1,6 +1,6 @@
 package io.github.tuguzd.restaurantapp.domain.usecase.util.crud
 
-import io.github.tuguzd.restaurantapp.domain.model.util.Identifiable
+import io.github.tuguzd.restaurantapp.domain.model.util.feature.Identifiable
 import io.github.tuguzd.restaurantapp.domain.repository.util.crud.ReadAllRepositoryService
 
 /**
