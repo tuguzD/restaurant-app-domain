@@ -1,6 +1,6 @@
 package io.github.tuguzd.restaurantapp.domain.model.access_control.user
 
-import io.github.tuguzd.restaurantapp.domain.model.organization.service_item.ServiceItem
+import io.github.tuguzd.restaurantapp.domain.model.organization.service_item.ServiceItemData
 import io.github.tuguzd.restaurantapp.domain.model.util.NanoId
 import io.github.tuguzd.restaurantapp.domain.util.randomNanoId
 import kotlinx.serialization.EncodeDefault
@@ -15,7 +15,7 @@ import kotlinx.serialization.Serializable
 public data class UserData(
     @EncodeDefault override val id: NanoId = randomNanoId(),
     override val userType: UserType,
-    @EncodeDefault override val serviceItem: ServiceItem? = null,
+    @EncodeDefault override val serviceItem: ServiceItemData? = null,
 
     @EncodeDefault override val email: String? = null,
     override val username: String,
