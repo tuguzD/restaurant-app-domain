@@ -14,7 +14,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class UserData(
     @EncodeDefault override val id: NanoId = randomNanoId(),
-    override val type: UserType,
+    override val userType: UserType,
     @EncodeDefault override val serviceItem: ServiceItem? = null,
 
     @EncodeDefault override val email: String? = null,

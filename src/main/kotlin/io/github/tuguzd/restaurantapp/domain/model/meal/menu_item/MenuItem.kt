@@ -9,7 +9,7 @@ import io.github.tuguzd.restaurantapp.domain.model.util.feature.*
  * Basic interface for menu item data representation.
  */
 public interface MenuItem : Identifiable<NanoId>, Datable, Presentable, Describable {
-    public val type: MenuItemType
+    public val menuItemType: MenuItemType
     public val menu: Menu
     public val creator: User
 

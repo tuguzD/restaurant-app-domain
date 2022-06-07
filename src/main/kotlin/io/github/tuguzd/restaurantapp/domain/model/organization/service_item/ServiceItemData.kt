@@ -14,7 +14,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class ServiceItemData(
     @EncodeDefault override val id: NanoId = randomNanoId(),
-    override val type: ServiceItemType,
+    override val serviceItemType: ServiceItemType,
     override val service: Service,
 
     override val name: String,

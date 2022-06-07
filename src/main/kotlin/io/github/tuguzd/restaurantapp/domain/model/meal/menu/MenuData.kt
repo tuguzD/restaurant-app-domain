@@ -15,7 +15,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 public data class MenuData(
     @EncodeDefault override val id: NanoId = randomNanoId(),
-    override val type: MenuType,
+    override val menuType: MenuType,
     override val creator: User,
     override val serviceItem: ServiceItem,
 
