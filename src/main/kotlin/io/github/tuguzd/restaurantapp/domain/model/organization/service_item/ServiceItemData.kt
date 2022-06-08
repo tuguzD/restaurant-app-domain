@@ -24,6 +24,6 @@ public data class ServiceItemData(
     @EncodeDefault override val imageUri: String? = null,
     @EncodeDefault override val description: String? = null,
 
-    override val datetimeCreate: String = Date().toString(),
+    @EncodeDefault override val datetimeCreate: String = Date().toString(),
     @EncodeDefault override val datetimeModify: String? = null,
 ) : ServiceItem

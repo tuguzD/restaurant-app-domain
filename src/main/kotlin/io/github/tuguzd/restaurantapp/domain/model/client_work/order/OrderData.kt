@@ -17,13 +17,13 @@ import java.util.Date
 public data class OrderData(
     @EncodeDefault override val id: NanoId = randomNanoId(),
     override val creator: UserData,
-    override val serviceItemPoint: ServiceItemPointData,
+    @EncodeDefault override val serviceItemPoint: ServiceItemPointData? = null,
 
     override val clientCount: Int,
     @EncodeDefault override val purchased: Boolean = false,
 
     @EncodeDefault override val description: String? = null,
 
-    override val datetimeCreate: String = Date().toString(),
+    @EncodeDefault override val datetimeCreate: String = Date().toString(),
     @EncodeDefault override val datetimeModify: String? = null,
 ) : Order

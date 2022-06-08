@@ -11,7 +11,7 @@ import io.github.tuguzd.restaurantapp.domain.model.util.feature.*
 public interface Menu : Identifiable<NanoId>, Datable, Presentable, Describable {
     public val menuType: MenuType
     public val creator: User
-    public val serviceItem: ServiceItem
+    public val serviceItem: ServiceItem?
 
     public val name: String
 }

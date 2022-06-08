@@ -23,6 +23,6 @@ public data class OrderItemData(
 
     @EncodeDefault override val description: String? = null,
 
-    override val datetimeCreate: String = Date().toString(),
+    @EncodeDefault override val datetimeCreate: String = Date().toString(),
     @EncodeDefault override val datetimeModify: String? = null,
 ) : OrderItem

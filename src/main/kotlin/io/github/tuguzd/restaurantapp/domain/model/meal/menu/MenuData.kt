@@ -18,13 +18,13 @@ public data class MenuData(
     @EncodeDefault override val id: NanoId = randomNanoId(),
     override val menuType: MenuType,
     override val creator: UserData,
-    override val serviceItem: ServiceItemData,
+    @EncodeDefault override val serviceItem: ServiceItemData? = null,
 
     override val name: String,
 
     @EncodeDefault override val imageUri: String? = null,
     @EncodeDefault override val description: String? = null,
 
-    override val datetimeCreate: String = Date().toString(),
+    @EncodeDefault override val datetimeCreate: String = Date().toString(),
     @EncodeDefault override val datetimeModify: String? = null,
 ) : Menu

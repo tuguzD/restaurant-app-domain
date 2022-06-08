@@ -10,7 +10,7 @@ import io.github.tuguzd.restaurantapp.domain.model.util.feature.*
  */
 public interface Order : Identifiable<NanoId>, Datable, Describable {
     public val creator: User
-    public val serviceItemPoint: ServiceItemPoint
+    public val serviceItemPoint: ServiceItemPoint?
 
     public val clientCount: Int
     public val purchased: Boolean
