@@ -13,5 +13,8 @@ public interface OrderItem : Identifiable<NanoId>, Datable, Describable {
     public val order: Order
     public val menuItem: MenuItem
 
+    public val ready: Boolean
+    public val delivered: Boolean
+
     public val itemCount: Int
 }

@@ -19,6 +19,9 @@ public data class OrderItemData(
     override val order: OrderData,
     override val menuItem: MenuItemData,
 
+    @EncodeDefault override val ready: Boolean = false,
+    @EncodeDefault override val delivered: Boolean = false,
+
     @EncodeDefault override val itemCount: Int = 1,
 
     @EncodeDefault override val description: String? = null,
