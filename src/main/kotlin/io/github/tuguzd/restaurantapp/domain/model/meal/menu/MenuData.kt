@@ -7,6 +7,7 @@ import io.github.tuguzd.restaurantapp.domain.util.randomNanoId
 import kotlinx.serialization.EncodeDefault
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.Serializable
+import java.util.*
 
 /**
  * Serializable data of some [menu][Menu].
@@ -24,6 +25,6 @@ public data class MenuData(
     @EncodeDefault override val imageUri: String? = null,
     @EncodeDefault override val description: String? = null,
 
-    override val datetimeCreate: String,
+    override val datetimeCreate: String = Date().toString(),
     @EncodeDefault override val datetimeModify: String? = null,
 ) : Menu

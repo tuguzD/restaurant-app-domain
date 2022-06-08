@@ -7,6 +7,7 @@ import io.github.tuguzd.restaurantapp.domain.util.randomNanoId
 import kotlinx.serialization.EncodeDefault
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.Serializable
+import java.util.Date
 
 /**
  * Serializable data of some [client order][Order].
@@ -23,6 +24,6 @@ public data class OrderData(
 
     @EncodeDefault override val description: String? = null,
 
-    override val datetimeCreate: String,
+    override val datetimeCreate: String = Date().toString(),
     @EncodeDefault override val datetimeModify: String? = null,
 ) : Order
